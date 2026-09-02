@@ -1,0 +1,6 @@
+# Normalise line endings: the code runs in a Linux container.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
