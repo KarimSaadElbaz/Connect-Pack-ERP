@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_connect_pack_root" name="Connect Pack" sequence="15"/>
+
+    <menuitem id="menu_connect_pack_estimation" name="Estimations"
+              parent="menu_connect_pack_root"
+              action="action_connect_pack_estimation" sequence="10"/>
+</odoo>

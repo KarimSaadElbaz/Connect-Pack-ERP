@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_connect_pack_estimation_user,connect.pack.estimation.user,model_connect_pack_estimation,base.group_user,1,1,1,0
+access_connect_pack_estimation_manager,connect.pack.estimation.manager,model_connect_pack_estimation,base.group_system,1,1,1,1
+access_connect_pack_estimation_line_user,connect.pack.estimation.line.user,model_connect_pack_estimation_line,base.group_user,1,1,1,1

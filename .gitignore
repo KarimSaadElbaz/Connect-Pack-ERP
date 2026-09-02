@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Odoo runtime data (never commit)
+*.log
+data_dir/
+filestore/
+sessions/
+.odoorc
+odoo.conf.local
+
+# Env / secrets
+.env
+*.local.env
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
