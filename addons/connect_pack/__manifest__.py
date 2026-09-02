@@ -35,6 +35,12 @@ sub-modules (connect_pack_sale, connect_pack_mrp, ...) as the scope grows.
         "views/estimation_views.xml",
         "views/connect_pack_menus.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "connect_pack/static/src/language_switch/language_switch.js",
+            "connect_pack/static/src/language_switch/language_switch.xml",
+        ],
+    },
     "application": True,
     "installable": True,
 }

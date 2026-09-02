@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="connect_pack.LanguageSwitch">
+        <div class="o_connect_pack_lang_switch">
+            <button type="button"
+                    class="btn btn-link o_nav_entry"
+                    t-att-title="buttonTitle"
+                    t-on-click="onToggle">
+                <i class="fa fa-globe me-1" role="img" aria-hidden="true"/>
+                <span t-esc="buttonLabel"/>
+            </button>
+        </div>
+    </t>
+</templates>
