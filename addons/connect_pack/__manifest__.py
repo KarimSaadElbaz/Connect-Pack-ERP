@@ -31,7 +31,14 @@ sub-modules (connect_pack_sale, connect_pack_mrp, ...) as the scope grows.
     "data": [
         "security/ir.model.access.csv",
         "data/ir_sequence.xml",
+        "data/connect.pack.paper.main.csv",
+        "data/connect.pack.paper.sub.csv",
+        "data/connect.pack.paper.mill.csv",
+        "data/connect.pack.paper.grade.csv",
         "views/estimation_views.xml",
+        "views/paper_classification_views.xml",
+        "views/product_template_views.xml",
+        "views/stock_lot_views.xml",
         "views/connect_pack_menus.xml",
     ],
     "assets": {

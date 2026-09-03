@@ -1,0 +1,31 @@
+id,code,name
+paper_grade_001,G001,ظهر أبيض
+paper_grade_002,G002,ظهر كريمي
+paper_grade_003,G003,درجة أولى
+paper_grade_004,G004,درجة ثانية
+paper_grade_005,G005,درجة ثالثة
+paper_grade_006,G006,ستوك
+paper_grade_007,G007,ورق تغليف
+paper_grade_008,G008,أبيض
+paper_grade_009,G009,كريم
+paper_grade_010,G010,بني
+paper_grade_011,G011,بني غامق
+paper_grade_012,G012,وجهين مط
+paper_grade_013,G013,وجهين لامع
+paper_grade_014,G014,مرتجع
+paper_grade_015,G015,قص محلي
+paper_grade_016,G016,شيتر
+paper_grade_017,G017,ميتاليز
+paper_grade_018,G018,أوف وايت
+paper_grade_019,G019,برتقالي
+paper_grade_020,G020,رمادي
+paper_grade_021,G021,قص خارج
+paper_grade_022,G022,زيتى
+paper_grade_023,G023,بيج
+paper_grade_024,G024,ألوان
+paper_grade_025,G025,وجه مط
+paper_grade_026,G026,محلى
+paper_grade_027,G027,جولد ستار
+paper_grade_028,G028,single PE coated
+paper_grade_029,G029,double PE
+paper_grade_030,G030,single PE uncoated

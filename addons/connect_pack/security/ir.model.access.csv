@@ -2,3 +2,14 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_connect_pack_estimation_user,connect.pack.estimation.user,model_connect_pack_estimation,base.group_user,1,1,1,0
 access_connect_pack_estimation_manager,connect.pack.estimation.manager,model_connect_pack_estimation,base.group_system,1,1,1,1
 access_connect_pack_estimation_line_user,connect.pack.estimation.line.user,model_connect_pack_estimation_line,base.group_user,1,1,1,1
+access_paper_main_user,connect.pack.paper.main.user,model_connect_pack_paper_main,base.group_user,1,0,0,0
+access_paper_main_manager,connect.pack.paper.main.manager,model_connect_pack_paper_main,stock.group_stock_manager,1,1,1,1
+access_paper_sub_user,connect.pack.paper.sub.user,model_connect_pack_paper_sub,base.group_user,1,0,0,0
+access_paper_sub_manager,connect.pack.paper.sub.manager,model_connect_pack_paper_sub,stock.group_stock_manager,1,1,1,1
+access_paper_mill_user,connect.pack.paper.mill.user,model_connect_pack_paper_mill,base.group_user,1,0,0,0
+access_paper_mill_manager,connect.pack.paper.mill.manager,model_connect_pack_paper_mill,stock.group_stock_manager,1,1,1,1
+access_paper_grade_user,connect.pack.paper.grade.user,model_connect_pack_paper_grade,base.group_user,1,0,0,0
+access_paper_grade_manager,connect.pack.paper.grade.manager,model_connect_pack_paper_grade,stock.group_stock_manager,1,1,1,1
+access_paper_family_user,connect.pack.paper.family.user,model_connect_pack_paper_family,base.group_user,1,0,0,0
+access_paper_family_stockuser,connect.pack.paper.family.stockuser,model_connect_pack_paper_family,stock.group_stock_user,1,1,1,0
+access_paper_family_manager,connect.pack.paper.family.manager,model_connect_pack_paper_family,stock.group_stock_manager,1,1,1,1

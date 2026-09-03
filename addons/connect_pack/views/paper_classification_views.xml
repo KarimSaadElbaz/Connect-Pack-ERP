@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============ التصنيف الرئيسي ============ -->
+    <record id="view_paper_main_list" model="ir.ui.view">
+        <field name="name">connect.pack.paper.main.list</field>
+        <field name="model">connect.pack.paper.main</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="legacy_code" optional="hide"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_paper_main" model="ir.actions.act_window">
+        <field name="name">التصنيف الرئيسي</field>
+        <field name="res_model">connect.pack.paper.main</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ============ التصنيف الفرعي ============ -->
+    <record id="view_paper_sub_list" model="ir.ui.view">
+        <field name="name">connect.pack.paper.sub.list</field>
+        <field name="model">connect.pack.paper.sub</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_paper_sub" model="ir.actions.act_window">
+        <field name="name">التصنيف الفرعي</field>
+        <field name="res_model">connect.pack.paper.sub</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ============ المصنع / الدولة ============ -->
+    <record id="view_paper_mill_list" model="ir.ui.view">
+        <field name="name">connect.pack.paper.mill.list</field>
+        <field name="model">connect.pack.paper.mill</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_paper_mill_search" model="ir.ui.view">
+        <field name="name">connect.pack.paper.mill.search</field>
+        <field name="model">connect.pack.paper.mill</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_paper_mill" model="ir.actions.act_window">
+        <field name="name">المصنع / الدولة</field>
+        <field name="res_model">connect.pack.paper.mill</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ============ الدرجة ============ -->
+    <record id="view_paper_grade_list" model="ir.ui.view">
+        <field name="name">connect.pack.paper.grade.list</field>
+        <field name="model">connect.pack.paper.grade</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_paper_grade" model="ir.actions.act_window">
+        <field name="name">الدرجة</field>
+        <field name="res_model">connect.pack.paper.grade</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ============ عيلة الورق ============ -->
+    <record id="view_paper_family_list" model="ir.ui.view">
+        <field name="name">connect.pack.paper.family.list</field>
+        <field name="model">connect.pack.paper.family</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="main_id"/>
+                <field name="sub_id"/>
+                <field name="mill_id"/>
+                <field name="grade_id"/>
+                <field name="product_count" string="الأصناف"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_paper_family_form" model="ir.ui.view">
+        <field name="name">connect.pack.paper.family.form</field>
+        <field name="model">connect.pack.paper.family</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_products" type="object"
+                                class="oe_stat_button" icon="fa-cubes">
+                            <field name="product_count" widget="statinfo" string="أصناف"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="code" readonly="1" placeholder="هيتولّد تلقائي"/></h1>
+                        <h3><field name="name" readonly="1"/></h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="main_id"/>
+                            <field name="sub_id"/>
+                        </group>
+                        <group>
+                            <field name="mill_id"/>
+                            <field name="grade_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_paper_family_search" model="ir.ui.view">
+        <field name="name">connect.pack.paper.family.search</field>
+        <field name="model">connect.pack.paper.family</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="main_id"/>
+                <field name="sub_id"/>
+                <field name="mill_id"/>
+                <field name="grade_id"/>
+                <separator/>
+                <filter name="g_main" string="التصنيف الرئيسي"
+                        context="{'group_by': 'main_id'}"/>
+                <filter name="g_sub" string="التصنيف الفرعي"
+                        context="{'group_by': 'sub_id'}"/>
+                <filter name="g_mill" string="المصنع"
+                        context="{'group_by': 'mill_id'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_paper_family" model="ir.actions.act_window">
+        <field name="name">عائلات الورق</field>
+        <field name="res_model">connect.pack.paper.family</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">أنشئ أول عيلة ورق</p>
+            <p>العيلة = رئيسي + فرعي + مصنع + درجة. الكود بيتولّد تلقائي (مثال R-20-001).</p>
+        </field>
+    </record>
+
+    <!-- ============ Menus ============ -->
+    <menuitem id="menu_paper_root" name="تصنيفات الورق"
+              parent="menu_connect_pack_root" sequence="20"/>
+    <menuitem id="menu_paper_family" name="عائلات الورق"
+              parent="menu_paper_root" action="action_paper_family" sequence="10"/>
+    <menuitem id="menu_paper_main" name="التصنيف الرئيسي"
+              parent="menu_paper_root" action="action_paper_main" sequence="20"/>
+    <menuitem id="menu_paper_sub" name="التصنيف الفرعي"
+              parent="menu_paper_root" action="action_paper_sub" sequence="30"/>
+    <menuitem id="menu_paper_mill" name="المصنع / الدولة"
+              parent="menu_paper_root" action="action_paper_mill" sequence="40"/>
+    <menuitem id="menu_paper_grade" name="الدرجة"
+              parent="menu_paper_root" action="action_paper_grade" sequence="50"/>
+
+</odoo>
