@@ -42,4 +42,5 @@ sub-modules (connect_pack_sale, connect_pack_mrp, ...) as the scope grows.
     },
     "application": True,
     "installable": True,
+    "post_init_hook": "post_init_hook",
 }
